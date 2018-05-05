@@ -10,13 +10,13 @@ import org.slf4j.LoggerFactory;
  */
 public class MobileNumberUtils {
 
-    private final Logger LOGGER = LoggerFactory.getLogger(MobileNumberUtils.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(MobileNumberUtils.class);
 
     private MobileNumberUtils() {
 
     }
 
-    public static String formatMobileNumber(final String mobileNumber) {
+    private static String formatMobileNumber(final String mobileNumber) {
         String newMobileNumber = removeAllSpaces( mobileNumber);
         final String invalidMobileNumberMessage = "Invalid Mobile Number Supplied";
         if (newMobileNumber.length() > 9) {
@@ -46,10 +46,7 @@ public class MobileNumberUtils {
     }
 
     private static boolean canTrimMobile(String mobileNumber) {
-       if(mobileNumber.startsWith("0") && mobileNumber.length() == 10) {
-            return true;
-        }
-        return canTrimMobileWithCountryCode(mobileNumber);
+        return mobileNumber.startsWith("0") && mobileNumber.length() == 10 || canTrimMobileWithCountryCode(mobileNumber);
     }
 
     private static boolean canTrimMobileWithCountryCode(String mobileNumber) {
@@ -62,7 +59,7 @@ public class MobileNumberUtils {
         return "263"+formatMobileNumber(mobileNumber);
     }
 
-    public static boolean isNumeric(final String str) {
+    private static boolean isNumeric(final String str) {
         return str.matches("-?\\d+(\\.\\d+)?");
     }
 
