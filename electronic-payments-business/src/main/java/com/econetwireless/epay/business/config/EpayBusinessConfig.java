@@ -13,12 +13,18 @@ import com.econetwireless.epay.dao.requestpartner.api.RequestPartnerDao;
 import com.econetwireless.epay.dao.subscriberrequest.api.SubscriberRequestDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Created by tnyamakura on 17/3/2017.
  */
 @Configuration
 public class EpayBusinessConfig {
+    @Autowired
+	RequestPartnerDao requestPartnerDao;
+
+  @Autowired
+    SubscriberRequestDao subscriberRequestDao;
 
     @Bean
     public CreditsService creditsService(final ChargingPlatform chargingPlatform, final SubscriberRequestDao subscriberRequestDao) {
