@@ -1,4 +1,4 @@
-package java.com.econetwireless.in.webservice.test;
+package econetwireless.in.webservice.test;
 
 import static org.junit.Assert.*;
 
