@@ -1,11 +1,9 @@
 package java.com.econetwireless.in.webservice.test;
 
 import static org.junit.Assert.assertEquals;
-
+import com.econetwireless.in.webservice.CreditRequest;
 import org.junit.Before;
 import org.junit.Test;
-
-import com.econetwireless.in.webservice.CreditRequest;
 
 public class CreditRequestTest {
 
