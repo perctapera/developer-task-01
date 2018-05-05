@@ -1,7 +1,6 @@
-package java.com.econetwireless.epay.business.services.impl.test;
+package com.econetwireless.epay.business.services.impl.test;
 
 import static org.mockito.Mockito.atLeastOnce;
-//import static org.mockito.Mockito.verify;
 import static org.powermock.api.mockito.PowerMockito.*;
 import static org.powermock.api.support.membermodification.MemberMatcher.method;
 
@@ -54,10 +53,10 @@ public class CreditsServiceImplTest {
 	@Test(expected=UnfinishedStubbingException.class)
 	public void testCredit() {
 		final AirtimeTopupRequest airtimeTopupRequest = new AirtimeTopupRequest();
-        airtimeTopupRequest.setAmount(2.73);
-        airtimeTopupRequest.setMsisdn("773303584");
+        airtimeTopupRequest.setAmount(5.80);
+        airtimeTopupRequest.setMsisdn("774805807");
         airtimeTopupRequest.setPartnerCode(partnerCode);
-        airtimeTopupRequest.setReferenceNumber("TOPUP-REF-0123");
+        airtimeTopupRequest.setReferenceNumber("TOPUP-REF-9999");
 		creditsService.credit(airtimeTopupRequest);
 		
 	}
@@ -65,10 +64,10 @@ public class CreditsServiceImplTest {
 	@Test
 	public void test_changeSubscriberRequestStatusOnCredit() throws Exception{
 		final AirtimeTopupRequest airtimeTopupRequest = new AirtimeTopupRequest();
-        airtimeTopupRequest.setAmount(2.73);
-        airtimeTopupRequest.setMsisdn("773303584");
+        airtimeTopupRequest.setAmount(5.80);
+        airtimeTopupRequest.setMsisdn("774805807");
         airtimeTopupRequest.setPartnerCode(partnerCode);
-        airtimeTopupRequest.setReferenceNumber("TOPUP-REF-0123");
+        airtimeTopupRequest.setReferenceNumber("TOPUP-REF-9999");
         subscriberRequest=new SubscriberRequest();
         inCreditResponse=new INCreditResponse();
 		CreditsServiceImpl spy=PowerMockito.spy(new CreditsServiceImpl(chargingPlatform, subscriberRequestDao));

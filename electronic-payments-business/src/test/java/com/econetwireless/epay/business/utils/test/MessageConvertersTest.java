@@ -1,4 +1,4 @@
-package java.com.econetwireless.epay.business.utils.test;
+package com.econetwireless.epay.business.utils.test;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.atLeastOnce;
