@@ -12,9 +12,9 @@ import javax.jws.soap.SOAPBinding;
  * Created by tnyamakura on 17/3/2017.
  */
 @WebService
-@SOAPBinding(style = SOAPBinding.Style.DOCUMENT)
+@SOAPBinding(style = SOAPBinding.Style.RPC)
 public interface IntelligentNetworkService {
-    BalanceResponse enquireBalance(String partnerCode, @WebParam(name = "msisdn") String msisdn);
+    BalanceResponse enquireBalance(@WebParam(name = "partnerCode") String partnerCode, @WebParam(name = "msisdn") String msisdn);
     CreditResponse creditSubscriberAccount(@WebParam(name = "creditRequest") CreditRequest creditRequest);
 
 }
