@@ -13,7 +13,7 @@ import java.util.Date;
 @Entity(name = "request")
 
 @NamedQueries({
-        @NamedQuery(name = "SubscriberRequest.findByPartnerCode", query = "SELECT r FROM request r WHERE r.partnerCode = :partnerCode order by r.dateCreated desc ")})
+        @NamedQuery(name = "SubscriberRequest.findByPartnerCode", query = "SELECT r FROM SubscriberRequest r WHERE r.partnerCode = :partnerCode order by r.dateCreated desc ")})
 
 @Table(name = "e_request", indexes = {@Index(name = "req_msisdn_indx", columnList = "mobile_number")})
 public class SubscriberRequest {
