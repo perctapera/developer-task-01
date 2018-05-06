@@ -12,11 +12,11 @@ import com.econetwireless.in.webservice.EnquireBalanceResponse;
 
 public class EnquireBalanceResponseTest {
 
-	
+
 	EnquireBalanceResponse enquireBalanceResponse;
 	@Mock
 	BalanceResponse balanceResponse;
-	
+
 	@Before
 	public void setUp() throws Exception {
 		MockitoAnnotations.initMocks(this);

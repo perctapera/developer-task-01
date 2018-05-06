@@ -29,26 +29,26 @@ public class CreditResponseTest {
 
 	@Test
 	public void testGetMsisdn() {
-		creditResponse.setMsisdn("773248969");
-		assertEquals("773248969", creditResponse.getMsisdn());
+		creditResponse.setMsisdn("778087468");
+		assertEquals("778087468", creditResponse.getMsisdn());
 	}
 
 	@Test
 	public void testSetMsisdn() {
-		creditResponse.setMsisdn("773248969");
-		assertEquals("773248969", creditResponse.getMsisdn());
+		creditResponse.setMsisdn("778087468");
+		assertEquals("778087468", creditResponse.getMsisdn());
 	}
 
 	@Test
 	public void testGetNarrative() {
-		creditResponse.setNarrative("narative bla bla");
-		assertEquals("narative bla bla", creditResponse.getNarrative());
+		creditResponse.setNarrative("narrative cr resp");
+		assertEquals("narative cr resp", creditResponse.getNarrative());
 	}
 
 	@Test
 	public void testSetNarrative() {
-		creditResponse.setNarrative("narative bla bla");
-		assertEquals("narative bla bla", creditResponse.getNarrative());
+		creditResponse.setNarrative("narative cr resp");
+		assertEquals("narative cr resp", creditResponse.getNarrative());
 	}
 
 	@Test

@@ -33,15 +33,12 @@ public class ChargingPlatformImplTest {
 
 	@Test
 	public void testEnquireBalance() {
-		//chargingPlatformImpl.enquireBalance("hot-recharge", "773248969");
-		//verify(intelligentNetworkService, times(1)).enquireBalance("hot-recharge", "773248969");
+
 	}
 
 	@Test
 	public void testCreditSubscriberAccount() {		
-		//chargingPlatformImpl.creditSubscriberAccount(inCreditRequest);		
-		//verify(intelligentNetworkService.creditSubscriberAccount(MessageConverters.convert(inCreditRequest)),times(1))
-		//.getMsisdn().equals(null);
+
 	}
 
 }

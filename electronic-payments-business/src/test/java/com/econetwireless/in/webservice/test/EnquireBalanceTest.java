@@ -10,10 +10,10 @@ import com.econetwireless.in.webservice.EnquireBalance;
 public class EnquireBalanceTest {
 
 	EnquireBalance enquireBalance;
-	private String msisdin="773248969";
+	private String msisdin="778087468";
 	private String partnerCode="hot-recharge";
-	
-	
+
+
 	@Before
 	public void init(){
 		enquireBalance=new EnquireBalance();

@@ -12,10 +12,10 @@ import com.econetwireless.in.webservice.CreditSubscriberAccount;
 public class CreditSubscriberAccountTest {
 
 	CreditSubscriberAccount creditSubscriberAccount;
-	
+
 	@Mock
 	CreditRequest creditRequest;
-	
+
 	@Before
 	public void setUp() throws Exception {
 		creditSubscriberAccount=new CreditSubscriberAccount();

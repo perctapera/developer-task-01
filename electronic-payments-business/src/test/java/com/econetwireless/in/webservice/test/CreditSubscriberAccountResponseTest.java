@@ -15,7 +15,7 @@ public class CreditSubscriberAccountResponseTest {
 	CreditSubscriberAccountResponse creditSubscriberAccountResponse;
 	@Mock
 	CreditResponse creditResponse;
-	
+
 	@Before
 	public void setUp() {
 		MockitoAnnotations.initMocks(this);
