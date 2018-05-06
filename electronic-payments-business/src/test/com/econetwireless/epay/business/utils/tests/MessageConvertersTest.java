@@ -1,8 +1,6 @@
-package com.econetwireless.epay.business.utils.test;
+package com.econetwireless.epay.business.utils.tests;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.atLeastOnce;
-import static org.mockito.Mockito.verify;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -18,15 +16,6 @@ import com.econetwireless.utils.pojo.INCreditRequest;
 import com.econetwireless.utils.pojo.INCreditResponse;
 
 public class MessageConvertersTest {
-
-	//@Mock
-	MessageConverters messageConverters;
-	
-	@Mock
-	private INCreditRequest inCreditRequest;
-
-	@Mock
-	private CreditRequest creditRequest;
 	
 	@Mock
 	private CreditResponse creditResponse;
@@ -39,15 +28,44 @@ public class MessageConvertersTest {
 	
 	@Mock
 	private INBalanceResponse inbalanceResponse;
+
+	MessageConverters messageConverters;
+	
+	@Mock
+	private INCreditRequest inCreditRequest;
+
+	@Mock
+	private CreditRequest creditRequest;
 	
 	@Before
 	public void intMocks() throws ClassNotFoundException{
-		MockitoAnnotations.initMocks(this);	
-		//Class.forName("com.econetwireless.epay.business.utils.MessageConverters");
-		
+		MockitoAnnotations.initMocks(this);			
 	}
 	
-	@SuppressWarnings("static-access")
+	@Test
+	public void testConvertCreditResponse() {
+		creditResponse=new CreditResponse();
+		assertNotNull(messageConverters.convert(creditResponse));
+		creditResponse=null;
+		assertNull(messageConverters.convert(creditResponse));
+	}
+
+	@Test
+	public void testConvertINBalanceResponse() {
+		inbalanceResponse=new INBalanceResponse();
+		assertNotNull(messageConverters.convert(inbalanceResponse));
+		inbalanceResponse=null;
+		assertNull(messageConverters.convert(inbalanceResponse));
+	}
+
+
+	@Test
+	public void testConvertBalanceResponse() {
+		balanceResponse=new BalanceResponse();
+		assertNotNull(messageConverters.convert(balanceResponse));
+		balanceResponse=null;
+		assertNull(messageConverters.convert(balanceResponse));
+	}
 	@Test
 	public void testConvertINCreditRequest() {
 		inCreditRequest=new INCreditRequest();
@@ -73,31 +91,6 @@ public class MessageConvertersTest {
 		assertNull(messageConverters.convert(increditResponse));
 	}
 
-	@SuppressWarnings("static-access")
-	@Test
-	public void testConvertCreditResponse() {
-		creditResponse=new CreditResponse();
-		assertNotNull(messageConverters.convert(creditResponse));
-		creditResponse=null;
-		assertNull(messageConverters.convert(creditResponse));
-	}
 
-	@SuppressWarnings("static-access")
-	@Test
-	public void testConvertINBalanceResponse() {
-		inbalanceResponse=new INBalanceResponse();
-		assertNotNull(messageConverters.convert(inbalanceResponse));
-		inbalanceResponse=null;
-		assertNull(messageConverters.convert(inbalanceResponse));
-	}
-
-	@SuppressWarnings("static-access")
-	@Test
-	public void testConvertBalanceResponse() {
-		balanceResponse=new BalanceResponse();
-		assertNotNull(messageConverters.convert(balanceResponse));
-		balanceResponse=null;
-		assertNull(messageConverters.convert(balanceResponse));
-	}
 
 }

@@ -1,4 +1,4 @@
-package java.com.econetwireless.epay.business.services.impl.test;
+package com.econetwireless.epay.business.services.impl.tests;
 
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;

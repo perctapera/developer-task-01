@@ -1,7 +1,5 @@
-package java.com.econetwireless.epay.business.services.impl.test;
+package com.econetwireless.epay.business.services.impl.tests;
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.verify;
 
@@ -12,11 +10,10 @@ import org.mockito.MockitoAnnotations;
 
 import com.econetwireless.epay.business.services.impl.PartnerCodeValidatorImpl;
 import com.econetwireless.epay.dao.requestpartner.api.RequestPartnerDao;
-import com.econetwireless.utils.execeptions.EpayException;
 
 public class PartnerCodeValidatorImplTest {
-	
-	PartnerCodeValidatorImpl partnerCodeValidatorImpl;
+
+PartnerCodeValidatorImpl partnerCodeValidatorImpl;
 	
 	@Mock
 	private RequestPartnerDao requestPartnerDao;
@@ -28,7 +25,7 @@ public class PartnerCodeValidatorImplTest {
 		partnerCodeValidatorImpl=new PartnerCodeValidatorImpl(requestPartnerDao);
 	}
 
-	@Test(expected=EpayException.class)
+	@Test(expected=Exception.class)
 	public void testValidatePartnerCode() {
 		partnerCodeValidatorImpl.validatePartnerCode(partnerCode);
 		verify(requestPartnerDao, atLeastOnce()).findByCode(partnerCode);

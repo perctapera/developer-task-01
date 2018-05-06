@@ -1,6 +1,6 @@
-package java.com.econetwireless.epay.business.config.test;
+package com.econetwireless.epay.business.config.tests;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -15,5 +15,6 @@ public class RootConfigTest {
 		ApplicationContext context=new AnnotationConfigApplicationContext(RootConfig.class);
 		assertNotNull(context);
 	}
+
 
 }
