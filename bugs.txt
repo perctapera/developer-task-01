@@ -1,0 +1,17 @@
+NAME:PERCIVAL TAPERA
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ECONET - System Development Specialist Task 01
+
+Report:
+
+1. class: com.econetwireless.utils.formatters  -  added an ommitted static modifier to the variable LOGGER 
+2. class: com.econetwireless.utils.enums - replaced to   this.code = code;
+3.0 class: com.econetwireless.epay.business.services.impl
+3.1. changed persist to save.
+3.2. changed update to save method.
+4. class PartnerCodeValidatorImpl - line 16 - removed this(super) . inserted super()
+5. PACKAGE - com.econetwireless.epay.domain
+6. Class SubscriberRequest - line 12 replace @Entity(name = "request") with @Entity annotation
+7. Class SubscriberRequest - line 13 replace 'Request' with 'subscriberRequest’  to correct Query
+8. Replaced '@PreInsert' with '@PrePersist' callback annotation in the class "SubscriberRequest - line 42" 
+9. PACKAGE - electronic payments api module - set annotations to EpayRequestProcessor and ReportingProcessor that were left out.
